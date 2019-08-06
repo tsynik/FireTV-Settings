@@ -11,6 +11,11 @@
         android:name="android.software.leanback"
         android:required="true" />
 
+    <!-- for DisplayAndSoundsActivity / AccessibilityActivity / MyAccountActivity / DeviceActivity -->
+    <uses-permission android:name="com.amazon.tv.permission.LAUNCHER_SETTINGS" />
+    <!-- for setting.AlexaSettingActivity -->
+    <uses-permission android:name="com.amazon.vizzini.setting.permission.ALEXA_SETTING" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

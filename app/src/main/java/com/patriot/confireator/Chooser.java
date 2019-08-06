@@ -31,6 +31,8 @@ public class Chooser extends GuidedStepFragment {
     private final int ACTION_MONITORING = 16;
     private final int ACTION_DEVELOPER = 17;
     private final int ACTION_RESET = 18;
+    private final int ACTION_DEV = 19;
+    private final int ACTION_AND = 20;
 
     private static void addAction(List<GuidedAction> actions,long id, String title, String desc){
         actions.add(new GuidedAction.Builder()
@@ -60,10 +62,10 @@ public class Chooser extends GuidedStepFragment {
         addAction(actions,ACTION_APPS,getString(R.string.two_opts_app),getString(R.string.two_opts_app_desc));
         addAction(actions,ACTION_PREFERENCES,getString(R.string.two_opts_pref),getString(R.string.two_opts_pref_desc));
         addAction(actions,ACTION_DEVICE,getString(R.string.two_opts_device),getString(R.string.two_opts_device_desc));
-//        addAction(actions,ACTION_ALEXA,getString(R.string.two_opts_alexa),"Show Alexa Settings");
+        addAction(actions,ACTION_ALEXA,getString(R.string.two_opts_alexa),getString(R.string.two_opts_alexa_desc));
 //        addAction(actions,ACTION_APPSTORE,getString(R.string.two_opts_appstore),"Show my Apps");
 //        addAction(actions,ACTION_NOTIFICATIONS,getString(R.string.two_opts_notifications),"Setting Notifications");
-//        addAction(actions,ACTION_LANGUAGE,getString(R.string.two_opts_lang),getString(R.string.two_opts_lang_desc));
+        addAction(actions,ACTION_LANGUAGE,getString(R.string.two_opts_lang),getString(R.string.two_opts_lang_desc));
 //        addAction(actions,ACTION_SUPERSU,getString(R.string.two_opts_supersu),"Display SuperSU Settings");
 //        addAction(actions,ACTION_XPOSED,getString(R.string.two_opts_xposed),"Display Xposed Settings");
 //        addAction(actions,ACTION_VNC,getString(R.string.two_opts_vnc),"Display VNC Server Settings");
@@ -71,6 +73,8 @@ public class Chooser extends GuidedStepFragment {
         addAction(actions,ACTION_MONITORING,getString(R.string.two_opts_monitor),getString(R.string.two_opts_monitor_desc));
         addAction(actions,ACTION_DEVELOPER,getString(R.string.two_opts_developer),getString(R.string.two_opts_developer_desc));
         addAction(actions,ACTION_RESET,getString(R.string.two_opts_res),getString(R.string.two_opts_res_desc));
+        addAction(actions,ACTION_AND,getString(R.string.two_opts_and),getString(R.string.two_opts_and_desc));
+        addAction(actions,ACTION_DEV,getString(R.string.two_opts_andev),getString(R.string.two_opts_andev_desc));
     }
 
     @Override
@@ -113,14 +117,14 @@ public class Chooser extends GuidedStepFragment {
         }
         if (action.getId() == ACTION_PREFERENCES) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.notificationcenter");
+            localIntent.setPackage("com.amazon.tv.settings.v2");
             localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_DEVICE) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.notificationcenter");
+            localIntent.setPackage("com.amazon.tv.settings.v2");
             localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.device.DeviceActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
@@ -128,7 +132,8 @@ public class Chooser extends GuidedStepFragment {
         if (action.getId() == ACTION_ALEXA) {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.vizzini");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.vizzini/.setting.AlexaSettingActivity"));
+            // localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.vizzini/.setting.AlexaSettingActivity")); // com.amazon.vizzini.vim.VizziniSettingsActivity
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.vizzini/.vim.VizziniSettingsActivity")); // com.amazon.vizzini.vim.VizziniSettingsActivity
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
@@ -142,13 +147,13 @@ public class Chooser extends GuidedStepFragment {
         if (action.getId() == ACTION_NOTIFICATIONS) {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.tv.notificationcenter");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.notificationcenter/.NotificationCenterActivity"));
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.notificationcenter/.NotificationCenterActivity")); // .settings.NotificationSettingsActivity
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_LANGUAGE) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("eu.chainfire.supersu");
+            localIntent.setPackage("com.amazon.tv.settings.v2");
             localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.preferences.LanguageSelectActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
@@ -199,6 +204,18 @@ public class Chooser extends GuidedStepFragment {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.tv.settings.v2");
             localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.FactoryResetActivity"));
+            localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(localIntent);
+        }
+        if (action.getId() == ACTION_DEV) {
+            Intent localIntent = new Intent();
+            localIntent.setAction("android.settings.APPLICATION_DEVELOPMENT_SETTINGS");
+            localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(localIntent);
+        }
+        if (action.getId() == ACTION_AND) {
+            Intent localIntent = new Intent("android.settings.SETTINGS");
+            localIntent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }

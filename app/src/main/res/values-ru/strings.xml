@@ -10,6 +10,8 @@
     <string name="two_opts_net_desc">Настройка сети и WLAN</string>
     <string name="two_opts_dev">Устойства и Bluetooth</string>
     <string name="two_opts_dev_desc">Настройка пульта ДУ, игрового контроллера и устройств Bluetooth</string>
+    <string name="two_opts_alexa">Alexa</string>
+    <string name="two_opts_alexa_desc">Показать настройки Alexa</string>
     <string name="two_opts_access">Специальные возможности</string>
     <string name="two_opts_access_desc">Настройка субтитров, голосового управления и доступности</string>
     <string name="two_opts_app">Приложения</string>
@@ -28,4 +30,8 @@
     <string name="two_opts_developer_desc">Показать меню разработчика</string>
     <string name="two_opts_res">Полный сброс</string>
     <string name="two_opts_res_desc">Восстановить заводские настройки</string>
+    <string name="two_opts_andev">Developer</string>
+    <string name="two_opts_andev_desc">Показать настройки Developer</string>
+    <string name="two_opts_and">Настройки Android</string>
+    <string name="two_opts_and_desc">Показать настройки Android</string>
 </resources>

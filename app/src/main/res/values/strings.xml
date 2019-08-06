@@ -10,6 +10,8 @@
     <string name="two_opts_net_desc">Configuring Network and WLAN</string>
     <string name="two_opts_dev">Bluetooth and Remotes</string>
     <string name="two_opts_dev_desc">Configuring Remote Control, Game Controller and Bluetooth Devices</string>
+    <string name="two_opts_alexa">Alexa</string>
+    <string name="two_opts_alexa_desc">Show Alexa Settings</string>
     <string name="two_opts_access">Accessibility</string>
     <string name="two_opts_access_desc">Customize Subtitles, Voice Control and Accessibility</string>
     <string name="two_opts_app">Applications</string>
@@ -28,4 +30,8 @@
     <string name="two_opts_developer_desc">Display Developer Menu</string>
     <string name="two_opts_res">Factory Reset</string>
     <string name="two_opts_res_desc">Restore Factory Settings</string>
+    <string name="two_opts_andev">Developer</string>
+    <string name="two_opts_andev_desc">Display Developer Options</string>
+    <string name="two_opts_and">Android</string>
+    <string name="two_opts_and_desc">Display Android Options</string>
 </resources>
