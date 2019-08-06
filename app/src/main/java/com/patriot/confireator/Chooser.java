@@ -53,24 +53,24 @@ public class Chooser extends GuidedStepFragment {
     @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
         super.onCreateButtonActions(actions,savedInstanceState);
-        addAction(actions,ACTION_DISPLAYSOUNDS,getString(R.string.two_opts_display),"Changing Screensaver, Resolution, Sound and HDMI-CEC");
-        addAction(actions,ACTION_NETWORK,getString(R.string.two_opts_net),"Configuring Network and WLAN");
-        addAction(actions,ACTION_DEVICES,getString(R.string.two_opts_dev),"Configuring Remote Control, Game Controller and Bluetooth Devices");
-        addAction(actions,ACTION_ACCESSIBILITY,getString(R.string.two_opts_access),"Customize Subtitles, Voice Control and Accessibility");
-        addAction(actions,ACTION_APPS,getString(R.string.two_opts_app),"Management of App Usage Data Collection");
-        addAction(actions,ACTION_PREFERENCES,getString(R.string.two_opts_pref),"Setting Parental Control, Notifications, Time Zone and Language");
-        addAction(actions,ACTION_DEVICE,getString(R.string.two_opts_device),"Info, Memory Card, Sleep Mode, Restart, Factory Settings");
+        addAction(actions,ACTION_DISPLAYSOUNDS,getString(R.string.two_opts_display),getString(R.string.two_opts_display_desc));
+        addAction(actions,ACTION_NETWORK,getString(R.string.two_opts_net),getString(R.string.two_opts_net_desc));
+        addAction(actions,ACTION_DEVICES,getString(R.string.two_opts_dev),getString(R.string.two_opts_dev_desc));
+        addAction(actions,ACTION_ACCESSIBILITY,getString(R.string.two_opts_access),getString(R.string.two_opts_access_desc));
+        addAction(actions,ACTION_APPS,getString(R.string.two_opts_app),getString(R.string.two_opts_app_desc));
+        addAction(actions,ACTION_PREFERENCES,getString(R.string.two_opts_pref),getString(R.string.two_opts_pref_desc));
+        addAction(actions,ACTION_DEVICE,getString(R.string.two_opts_device),getString(R.string.two_opts_device_desc));
 //        addAction(actions,ACTION_ALEXA,getString(R.string.two_opts_alexa),"Show Alexa Settings");
 //        addAction(actions,ACTION_APPSTORE,getString(R.string.two_opts_appstore),"Show my Apps");
 //        addAction(actions,ACTION_NOTIFICATIONS,getString(R.string.two_opts_notifications),"Setting Notifications");
-//        addAction(actions,ACTION_LANGUAGE,getString(R.string.two_opts_lang),"Setting the Language");
+//        addAction(actions,ACTION_LANGUAGE,getString(R.string.two_opts_lang),getString(R.string.two_opts_lang_desc));
 //        addAction(actions,ACTION_SUPERSU,getString(R.string.two_opts_supersu),"Display SuperSU Settings");
 //        addAction(actions,ACTION_XPOSED,getString(R.string.two_opts_xposed),"Display Xposed Settings");
 //        addAction(actions,ACTION_VNC,getString(R.string.two_opts_vnc),"Display VNC Server Settings");
-        addAction(actions,ACTION_ACCOUNT,getString(R.string.two_opts_account),"Login and logout from Amazon Account");
-        addAction(actions,ACTION_MONITORING,getString(R.string.two_opts_monitor),"Management of Data Monitoring");
-        addAction(actions,ACTION_DEVELOPER,getString(R.string.two_opts_developer),"Display Developer Menu");
-        addAction(actions,ACTION_RESET,getString(R.string.two_opts_res),"Restore Factory Settings");
+        addAction(actions,ACTION_ACCOUNT,getString(R.string.two_opts_account),getString(R.string.two_opts_account_desc));
+        addAction(actions,ACTION_MONITORING,getString(R.string.two_opts_monitor),getString(R.string.two_opts_monitor_desc));
+        addAction(actions,ACTION_DEVELOPER,getString(R.string.two_opts_developer),getString(R.string.two_opts_developer_desc));
+        addAction(actions,ACTION_RESET,getString(R.string.two_opts_res),getString(R.string.two_opts_res_desc));
     }
 
     @Override

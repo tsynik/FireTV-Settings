@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Настройки</string>
+    <string name="two_opts_title">Fire TV</string>
+    <string name="two_opts_breadcrumb">Amazon</string>
+    <string name="two_opts_desc">Настройки</string>
+
+    <string name="two_opts_display">Экран и Звук</string>
+    <string name="two_opts_display_desc">Изменение заставки, разрешения, звука и HDMI-CEC</string>
+    <string name="two_opts_net">Сеть</string>
+    <string name="two_opts_net_desc">Настройка сети и WLAN</string>
+    <string name="two_opts_dev">Устойства и Bluetooth</string>
+    <string name="two_opts_dev_desc">Настройка пульта ДУ, игрового контроллера и устройств Bluetooth</string>
+    <string name="two_opts_access">Специальные возможности</string>
+    <string name="two_opts_access_desc">Настройка субтитров, голосового управления и доступности</string>
+    <string name="two_opts_app">Приложения</string>
+    <string name="two_opts_app_desc">Управление сбором данных об использовании приложений</string>
+    <string name="two_opts_pref">Система</string>
+    <string name="two_opts_pref_desc">Настройка родительского контроля, уведомлений, часового пояса и языка</string>
+    <string name="two_opts_device">Устройство</string>
+    <string name="two_opts_device_desc">Информация, Карта памяти, Спящий режим, Восстановление, Заводские настройки</string>
+    <string name="two_opts_lang">Язык</string>
+    <string name="two_opts_lang_desc">Установка языка</string>
+    <string name="two_opts_account">Аккаунт Amazon</string>
+    <string name="two_opts_account_desc">Вход и выход из учетной записи Amazon</string>
+    <string name="two_opts_monitor">Управление данными</string>
+    <string name="two_opts_monitor_desc">Управление мониторингом данных</string>
+    <string name="two_opts_developer">Меню разработчика</string>
+    <string name="two_opts_developer_desc">Показать меню разработчика</string>
+    <string name="two_opts_res">Полный сброс</string>
+    <string name="two_opts_res_desc">Восстановить заводские настройки</string>
+</resources>
