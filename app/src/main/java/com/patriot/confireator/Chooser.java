@@ -78,50 +78,50 @@ public class Chooser extends GuidedStepFragment {
         super.onGuidedActionClicked(action);
         if (action.getId() == ACTION_DISPLAYSOUNDS) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.display_sounds.DisplayAndSoundsActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_NETWORK) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.network.NetworkActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.network.NetworkActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_DEVICES) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_ACCESSIBILITY) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.accessibility.AccessibilityActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_APPS) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.applications.ApplicationsActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_PREFERENCES) {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.tv.notificationcenter");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.preferences.PreferencesActivity"));
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_DEVICE) {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.tv.notificationcenter");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.device.DeviceActivity"));
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.device.DeviceActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
@@ -149,7 +149,7 @@ public class Chooser extends GuidedStepFragment {
         if (action.getId() == ACTION_LANGUAGE) {
             Intent localIntent = new Intent();
             localIntent.setPackage("eu.chainfire.supersu");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.preferences.LanguageSelectActivity"));
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.preferences.LanguageSelectActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
@@ -177,14 +177,14 @@ public class Chooser extends GuidedStepFragment {
         if (action.getId() == ACTION_ACCOUNT) {
             Intent localIntent = new Intent();
             localIntent.setPackage("com.amazon.ssm");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.my_account.MyAccountActivity"));
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
         if (action.getId() == ACTION_MONITORING) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.preferences.data_monitoring.DataMonitoringActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.preferences.data_monitoring.DataMonitoringActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
@@ -197,8 +197,8 @@ public class Chooser extends GuidedStepFragment {
         }
         if (action.getId() == ACTION_RESET) {
             Intent localIntent = new Intent();
-            localIntent.setPackage("com.amazon.tv.settings");
-            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings/.tv.FactoryResetActivity"));
+            localIntent.setPackage("com.amazon.tv.settings.v2");
+            localIntent.setComponent(ComponentName.unflattenFromString("com.amazon.tv.settings.v2/.tv.FactoryResetActivity"));
             localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(localIntent);
         }
